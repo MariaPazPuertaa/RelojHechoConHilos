@@ -4,8 +4,7 @@
  */
 package autonoma.relojconhilos.main;
 
-import autonoma.relojconhilos.models.RelojHiloHerencia;
-import autonoma.relojconhilos.models.RelojHiloInterface;
+import autonoma.relojconhilos.models.Reloj;
 
 /**
  *.
@@ -13,17 +12,8 @@ import autonoma.relojconhilos.models.RelojHiloInterface;
  */
 public class Main {
     public static void main(String[] args) {
-        // Crear objeto que implementa Runnable
-        RelojHiloInterface relojInterface = new RelojHiloInterface();
-        Thread hiloInterface = new Thread(relojInterface);
-        
-        // Crear objeto que hereda de Thread
-        RelojHiloHerencia relojHerencia = new RelojHiloHerencia();
-        
-        // Iniciar ambos hilos
-        hiloInterface.start();
-        relojHerencia.start();
-        
-        
+        Reloj reloj = new Reloj();
+        reloj.start();
+       
     }
 }
